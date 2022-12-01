@@ -28,7 +28,7 @@ public class AbdullahPage {
     @FindBy(name = "secondPassword")
     public WebElement newPasswordTextbox;
     @FindBy(id = "register-submit")
-    public WebElement registerButton;
+    public WebElement registerSubmit;
     @FindBy(xpath = "//*[text()='Registration saved!']")
     public WebElement successMessageToastContainer;
 
@@ -36,6 +36,9 @@ public class AbdullahPage {
 
     @FindBy(id = "account-menu")
     public WebElement accountMenu;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    public WebElement registerButton;
 
     @FindBy(xpath = "//input[@id='firstPassword']")
     public WebElement firstPasswordInput;
