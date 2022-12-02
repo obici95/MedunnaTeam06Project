@@ -75,6 +75,11 @@ public class SabriPage {
     @FindBy(xpath = "//*[@placeholder='Your email']")
     public WebElement appointmentEmail;
 
+    //************************ =>  US017  <= ***********************************************
+    @FindBy(xpath = "//*[@placeholder='Your email']")
+    public WebElement ppointmentEmail;
+
+
 
 }
 
