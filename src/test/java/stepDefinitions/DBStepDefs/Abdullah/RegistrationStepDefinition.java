@@ -177,8 +177,8 @@ public class RegistrationStepDefinition {
 
         Driver.waitAndSendText(registrationPage.newPasswordTextbox,secondPassword,5);
     }
-    @Then("Kullanici, register butonuna basar ve basari mesajini dogrular")
-    public void kullaniciRegisterButonunaBasarVeBasariMesajiniDogrular() {
+    @Then("Kullanici, register butonuna basar ve basari mesajini dogrular aa")
+    public void kullaniciRegisterButonunaBasarVeBasariMesajiniDogrularAa() {
         Driver.waitAndClick(registrationPage.registerSubmit);
     }
 

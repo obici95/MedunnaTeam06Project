@@ -10,7 +10,7 @@ Feature: End To End Test
     And Kullanici,gecerli bir "<email>" girer aa
     And Kullanici,gecerli bir sifre "<firstPassword>" girer aa
     And Kullanici,gecerli sifreyi "<secondPassword>" tekrar girer aa
-    Then Kullanici, register butonuna basar ve basari mesajini dogrular
+    Then Kullanici, register butonuna basar ve basari mesajini dogrular aa
     Examples:
       | Ssn | firstname | lastname | username | email | firstPassword | secondPassword |
       | Ssn | firstname | lastname | username | email | firstPassword | secondPassword |

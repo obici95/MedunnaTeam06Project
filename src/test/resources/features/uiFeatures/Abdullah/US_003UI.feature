@@ -2,15 +2,15 @@
 Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password strength" seviyeleri görülebilmelidir.
 
   Background:TestCase Ortak adımlar
-    Given Kullanici, "medunnaURL" ana sayfasinda
-    Then Kullanici, sag tarafta bulunan ikona tiklar
-    And Kullanici, ikonun altinda acilan Register butonuna tiklar
+    Given AA Kullanici, "medunnaURL" ana sayfasinda aa
+    Then AA Kullanici, sag tarafta bulunan ikona tiklar aa
+    And AA Kullanici, ikonun altinda acilan Register butonuna tiklar aa
 
   @US03TC01
   Scenario Outline: TC_001 Geçerli bir parola en az 4 karakter olmalıdır.
-    And Kullanici, New password bolumune dort karakterlik bir "<sifre>" girer
-    And Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
-    And Kullanici, Your password is required to be at least four characters. yazisinin kalktigini dogrular.
+    And AA Kullanici, New password bolumune dort karakterlik bir "<sifre>" girer
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
+    And AA Kullanici, Your password is required to be at least four characters. yazisinin kalktigini dogrular.
     Examples:
       | sifre |
       | aA1.  |
@@ -20,9 +20,9 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
 
   @US03TC04
   Scenario Outline: TC_002 Geçerli bir parola en az 4 karakter olmalıdır.
-    And Kullanici, New password bolumune dort karakterden az bir "<sifre>" girer
-    And Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
-    And Kullanici Your password is required to be at least four characters. yazisinin oldugunu dogrular.
+    And AA Kullanici, New password bolumune dort karakterden az bir "<sifre>" girer
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
+    And AA Kullanici Your password is required to be at least four characters. yazisinin oldugunu dogrular.
     Examples:
       | sifre |
       | aA.   |
@@ -32,9 +32,9 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
 
   @US03TC03
   Scenario Outline: TC_003 Güçlü bir parola için şifre en az 7 karakterden oluşmalıdır.
-    And Kullanici, New Password bolumune en az yedi karakterden olusan bir "<sifre>" girer
-    And Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
-    And Kullanici, Password Strength seviyesinin <2> oldugunu dogrular.
+    And AA Kullanici, New Password bolumune en az yedi karakterden olusan bir "<sifre>" girer
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
+    And AA Kullanici, Password Strength seviyesinin <2> oldugunu dogrular.
     Examples:
       | sifre   | 2 |
       | aaaaaaA | 2 |
@@ -44,9 +44,9 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
 
   @US03TC04
   Scenario Outline: TC_003 Güçlü bir parola için şifre en az 7 karakterden oluşmalıdır.
-    And Kullanici, New Password bolumune en az yedi karakterden olusan bir "<sifre>" girer
-    And Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
-    And Kullanici, Password Strength seviyesinin <2> oldugunu dogrular.
+    And AA Kullanici, New Password bolumune en az yedi karakterden olusan bir "<sifre>" girer
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre>" yi girer
+    And AA Kullanici, Password Strength seviyesinin <2> oldugunu dogrular.
     Examples:
       | sifre   | 2 |
       | aaaaaaA | 2 |
@@ -57,10 +57,10 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
   @US30TC05
   Scenario Outline: TC_004 Daha güçlü şifre için en az 1 küçük harf olmalı ve "Password strength" seviyesinin değiştiği görülebilmelidir.
 
-    And Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
-    And Kullanici, New Password bolumune en az bir tane "<kucukHarf>" ekler.
-    And Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
-    And Kullanıcı, Password Strength seviyesinin degistigini dogrular.
+    And AA Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
+    And AA Kullanici, New Password bolumune en az bir tane "<kucukHarf>" ekler.
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
+    And AA Kullanıcı, Password Strength seviyesinin degistigini dogrular.
     Examples:
       | sifre | harf | sifre1 |
       | 123456 | a | 123456a |
@@ -70,10 +70,10 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
   @US30TC06
   Scenario Outline: TC_005 Şifre en az 1 rakam içermeli ve "Password strength" seviyesinin değiştiği görülebilmelidir.
 
-    And Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
-    And Kullanici, New Password bolumune en az bir tane "<buyukHarf>" ekler.
-    And Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
-    And Kullanıcı, Password Strength seviyesinin degistigini dogrular.
+    And AA Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
+    And AA Kullanici, New Password bolumune en az bir tane "<buyukHarf>" ekler.
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
+    And AA Kullanıcı, Password Strength seviyesinin degistigini dogrular.
     Examples:
       | sifre | buyukHarf | sifre1 |
       |aaaaaa  | B | aaaaaaB |
@@ -83,10 +83,10 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
   @US03TC07
   Scenario Outline: TC_006 Şifre en az 1 rakam içermeli ve "Password strength" seviyesinin değiştiği görülebilmelidir.
 
-    And Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
-    And Kullanici, New Password bolumune en az bir tane "<rakam>" ekler.
-    And Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
-    And Kullanıcı, Password Strength seviyesinin degistigini dogrular.
+    And AA Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
+    And AA Kullanici, New Password bolumune en az bir tane "<rakam>" ekler.
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
+    And AA Kullanıcı, Password Strength seviyesinin degistigini dogrular.
     Examples:
       | sifre | rakam | sifre1 |
       |%&/()@  | 8 | %&/()@8 |
@@ -96,10 +96,10 @@ Feature: US_003 Registration sayfasında güçlü şifre girilmeli ve "Password 
   @US03TC08
   Scenario Outline: TC_007 Şifre en az 1 özel karakter içermeli ve"Password strength" seviyesinin değiştiği görülebilmelidir.
 
-    And Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
-    And Kullanici, New Password bolumune en az bir tane "<ozelKarakter>" ekler.
-    And Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
-    And Kullanıcı, Password Strength seviyesinin degistigini dogrular.
+    And AA Kullanici, New Password bolumune en az alti karakterlik bir "<sifre>" girer
+    And AA Kullanici, New Password bolumune en az bir tane "<ozelKarakter>" ekler.
+    And AA Kullanici, New password confirmation bolumune ayni "<sifre1>" yi girer
+    And AA Kullanıcı, Password Strength seviyesinin degistigini dogrular.
     Examples:
       | sifre | ozelKarakter | sifre1 |
       |%&/()@  | 8 | %&/()@8 |
