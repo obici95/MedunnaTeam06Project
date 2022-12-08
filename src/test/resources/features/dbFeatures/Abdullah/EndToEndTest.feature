@@ -1,9 +1,9 @@
 @E2ETest
 Feature: End To End Test
   Scenario Outline: Yeni bir kullanici olusturup kaydedilir.
-    Given Kullanici, "medunnaURL" ana sayfasinda aa
-    Then Kullanici, sag tarafta bulunan ikona tiklar aa
-    And Kullanici, ikonun altinda acilan Register butonuna tiklar aa
+    Given AA Kullanici, "medunnaURL" ana sayfasinda aa
+    Then AA Kullanici, sag tarafta bulunan ikona tiklar aa
+    And AA Kullanici, ikonun altinda acilan Register butonuna tiklar aa
     Then Kullanici, gecerli bir "<Ssn>" numarasi girer aa
     And Kullanici,gecerli bir "<firstname>" ve "<lastname>" girer aa
     And Kullanici,gecerli bir login "<username>" girer aa

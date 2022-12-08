@@ -18,7 +18,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             scenario.attach(screenshot, "image/png","screenshots");
         }
-        //Driver.quitDriver();
+        Driver.quitDriver();
     }
 
     @Before(order=4, value="@postApiRequest")
