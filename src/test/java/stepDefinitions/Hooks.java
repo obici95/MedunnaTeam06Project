@@ -21,9 +21,8 @@ public class Hooks {
         Driver.quitDriver();
     }
 
-    @Before(order=4, value="@postApiRequest")
+    @Before(order=4, value="@US_27_API")
     public void beforeApi() {
-
         medunnaSetup();
 
     }
