@@ -76,9 +76,129 @@ public class SabriPage {
     public WebElement appointmentEmail;
 
     //************************ =>  US017  <= ***********************************************
-    @FindBy(xpath = "//*[@placeholder='Your email']")
-    public WebElement ppointmentEmail;
+    @FindBy(xpath = "//*[@id='entity-menu']")
+    public WebElement itemsTitles;
 
+    @FindBy(xpath = "(//*[@class='dropdown-item'])[5]")
+    public WebElement testItem;
+
+    @FindBy(xpath = "//*[@id='jh-create-entity']")
+    public WebElement createNewTestItem;
+
+    @FindBy(xpath = "//*[@id='hospitalmsappfrontendApp.cTestItem.home.createOrEditLabel']")
+    public WebElement createOrEditTestItem;
+
+    @FindBy(xpath = "//*[@id='c-test-item-name']")
+    public WebElement name;
+
+    @FindBy(xpath = "//*[@id='c-test-item-description']")
+    public WebElement description;
+
+    @FindBy(xpath = "//*[@id='c-test-item-price']")
+    public WebElement price;
+
+    @FindBy(xpath = "//*[@id='c-test-item-defaultValMin']")
+    public WebElement defaultMinValue;
+
+    @FindBy(xpath = "//*[@id='c-test-item-defaultValMax']")
+    public WebElement defaultMaxValue;
+
+    @FindBy(xpath = "//*[@id='c-test-item-createdDate']")
+    public WebElement createdDate;
+
+    @FindBy(xpath = "//*[@class='btn btn-primary']")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "(//*[@class='btn btn-info btn-sm'])[1]")
+    public WebElement viewButton;
+
+    @FindBy(xpath = "//h2")
+    public WebElement testItemBasligi;
+
+    @FindBy(xpath = "(//*[@class='hand'])[1]")
+    public WebElement idButton;
+
+    @FindBy(xpath = "(//*[@class='btn btn-danger btn-sm'])[1]")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//*[@id='jhi-confirm-delete-cTestItem']")
+    public WebElement deleteUyariButton;
+
+    @FindBy(xpath = "//*[@class='Toastify__toast-body']")
+    public WebElement testItemDeletedYazisi;
+
+    //************************ =>  US021  <= ***********************************************
+    @FindBy(xpath = "(//*[@class='d-flex align-items-center dropdown-toggle nav-link'])[1]")
+    public WebElement myPages;
+
+    @FindBy(xpath = "(//*[@class='dropdown-item'])[1]")
+    public WebElement searchPatient;
+
+    @FindBy(xpath = "//*[@class='form-control']")
+    public WebElement ssnMetinKutusu;
+
+    @FindBy(xpath = "(//*[@class='d-none d-md-inline'])[3]")
+    public WebElement showAppointment;
+
+    @FindBy(xpath = "//*[@class='btn btn-warning btn-sm']")
+    public WebElement editButton;
+
+    @FindBy(xpath = "//h2")
+    public WebElement createOrEditAnAppointmentBasligi;
+
+    @FindBy(xpath = "//*[@id='appointment-status']")
+    public WebElement statusBox;
+
+    @FindBy(xpath = "//*[@value='UNAPPROVED']")
+    public WebElement unapproved;
+
+    @FindBy(xpath = "//*[@value='PENDING']")
+    public WebElement pending;
+
+    @FindBy(xpath = "//*[@value='CANCELLED']")
+    public WebElement cancelled;
+
+    @FindBy(xpath = "//*[text()='COMPLETED']")
+    public WebElement completed;
+
+    @FindBy(xpath = "//*[@id='appointment-anamnesis']")
+    public WebElement anamnesis;
+
+    @FindBy(xpath = "//*[@id='appointment-treatment']")
+    public WebElement treatment;
+
+    @FindBy(xpath = "//*[@id='appointment-diagnosis']")
+    public WebElement diagnosis;
+
+    @FindBy(xpath = "//*[@id='appointment-physician']")
+    public WebElement physician;
+
+    @FindBy(xpath = "//*[@id='save-entity']")
+    public WebElement appointmentSave;
+
+    @FindBy(xpath = "//*[@class='Toastify__toast-body']")
+    public WebElement savedYazisiUS21;
+
+    @FindBy(xpath = "//*[@class='appointment-btn scrollto']")
+    public WebElement makeAnAppointment;
+
+    @FindBy(xpath = "//*[@id='firstName']")
+    public WebElement firstNameUS21;
+
+    @FindBy(xpath = "//*[@id='lastName']")
+    public WebElement lastNameUS21;
+
+    @FindBy(xpath = "//*[@id='ssn']")
+    public WebElement ssn;
+
+    @FindBy(xpath = "//*[@id='email']")
+    public WebElement emailUS21;
+
+    @FindBy(xpath = "//*[@id='phone']")
+    public WebElement phone;
+
+    @FindBy(xpath = "(//div//option)[9]")
+    public WebElement selectedPhysician;
 
 
 }
