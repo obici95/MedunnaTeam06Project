@@ -1,5 +1,5 @@
-@US04
-Feature: Giriş sayfası yalnızca geçerli kimlik bilgileriyle erişilebilir olmalıdır.
+@SmokeTest
+Feature: Smoke Test
 
   Background:
     Given Kullanici, "medunnaURL" ana sayfasinda
@@ -18,7 +18,7 @@ Feature: Giriş sayfası yalnızca geçerli kimlik bilgileriyle erişilebilir ol
 
 
   @US04TC03
-  Scenario: TC_004 Giriş yapmak için başarı mesajını doğrulayan, geçerli bir kullanıcı adı ve şifre olmalıdır.
+  Scenario: TC_003 Giriş yapmak için başarı mesajını doğrulayan, geçerli bir kullanıcı adı ve şifre olmalıdır.
     Then Kullanici, daha onceden olusturmus oldugu "gecersizKullaniciAdi"nı girer
     And Kullanici, daha onceden oluşturmuş oldugu "gecersizPassword"unu girer
     And Kullanici, Sign in butonuna tiklar
@@ -57,7 +57,5 @@ Feature: Giriş sayfası yalnızca geçerli kimlik bilgileriyle erişilebilir ol
     And Kullanici, Sign in butonuna tiklar
     And Kullanici basarili bir giris yaptigini dogrular.
     Then Kullanici basari mesajini dogrular
-    And Kullanici, kullanici ismi uzerine tiklar
-    And Kullanici, kullanici ismi altinda açilan sign out butonuna tiklar
-    And Kullanici, sayfayi kapatir.
+#    And Kullanici, sayfayi kapatir.
 
