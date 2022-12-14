@@ -23,7 +23,7 @@ public class US14_TC02_StepDefs {
     Actions actions=new Actions(Driver.getDriver());
 
     List<String> actualStatusBoxList=new ArrayList<>();
-    String color = "yellow";
+    String color = "gray";
     String color1 = "indigo";
     @And("Doktor In Patients listesinde istedigi hastanin satirindaki Edit'e tiklar.")
     public void doktorInPatientsListesindeIstedigiHastaninSatirindakiEditETiklar() {

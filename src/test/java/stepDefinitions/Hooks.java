@@ -8,6 +8,9 @@ import utilities.Driver;
 
 public class Hooks {
 
+
+
+
    @After
     public void tearDown(Scenario scenario){
         final byte[] screenshot=((TakesScreenshot)
@@ -15,7 +18,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             scenario.attach(screenshot, "image/png","screenshots");
         }
-        Driver.quitDriver();
+       Driver.quitDriver();
     }
 
 
