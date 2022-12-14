@@ -102,6 +102,19 @@ public class AbdullahPage {
     @FindBy(xpath = "//span[text()='Cancel']")
     public WebElement cancelButton;
 
+    //US_026 locations
+
+    @FindBy(xpath = "//*[text()='CONTACT']")
+    public WebElement CONTACT;
+    @FindBy(xpath= "(//div[@role='menu'])[1]")
+    public WebElement ItemsAndTitlesDropDownMenu;
+    @FindBy(css = ".svg-inline--fa.fa-envelope-open-text.fa-w-16.fa-fw ")
+    public WebElement Messages;
+    @FindBy(css = "#jhi-confirm-delete-cMessage")
+    public WebElement deleteButton;
+
+
+
 
 
 

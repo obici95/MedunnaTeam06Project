@@ -1,16 +1,16 @@
 @E2ETest
 Feature: End To End Test
   Scenario Outline: Yeni bir kullanici olusturup kaydedilir.
-    Given Kullanici, "medunnaURL" ana sayfasinda aa
-    Then Kullanici, sag tarafta bulunan ikona tiklar aa
-    And Kullanici, ikonun altinda acilan Register butonuna tiklar aa
+    Given AA Kullanici, "medunnaURL" ana sayfasinda aa
+    Then AA Kullanici, sag tarafta bulunan ikona tiklar aa
+    And AA Kullanici, ikonun altinda acilan Register butonuna tiklar aa
     Then Kullanici, gecerli bir "<Ssn>" numarasi girer aa
     And Kullanici,gecerli bir "<firstname>" ve "<lastname>" girer aa
     And Kullanici,gecerli bir login "<username>" girer aa
     And Kullanici,gecerli bir "<email>" girer aa
     And Kullanici,gecerli bir sifre "<firstPassword>" girer aa
     And Kullanici,gecerli sifreyi "<secondPassword>" tekrar girer aa
-    Then Kullanici, register butonuna basar ve basari mesajini dogrular
+    Then Kullanici, register butonuna basar ve basari mesajini dogrular aa
     Examples:
       | Ssn | firstname | lastname | username | email | firstPassword | secondPassword |
       | Ssn | firstname | lastname | username | email | firstPassword | secondPassword |
