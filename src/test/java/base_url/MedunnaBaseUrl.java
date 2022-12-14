@@ -5,10 +5,10 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
 public class MedunnaBaseUrl {
-    protected RequestSpecification specMedunna;
+    protected static RequestSpecification specMedunna;
 
     @Before
-    public void setup() {
+    public  void setup() {
         specMedunna = new RequestSpecBuilder().setBaseUri("https://medunna.com").build();
     }
 }

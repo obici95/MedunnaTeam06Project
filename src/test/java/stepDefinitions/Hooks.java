@@ -9,8 +9,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
+import static stepDefinitions.API_StepDefs.Abdullah.MedunnaBaseUrl.medunnaSetup;
+
 public class Hooks {
 
+ Hatem/13/12/2022
     public static RequestSpecification spec;
     @Before(value = "@TC18")
     public void setup(){
@@ -24,10 +27,6 @@ public class Hooks {
         if (scenario.isFailed()) {
             scenario.attach(screenshot, "image/png","screenshots");
         }
-        Driver.quitDriver();
+     //  Driver.quitDriver();
     }
-
-
-
-
 }

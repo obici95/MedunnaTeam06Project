@@ -28,7 +28,7 @@ public class AbdullahPage {
     @FindBy(name = "secondPassword")
     public WebElement newPasswordTextbox;
     @FindBy(id = "register-submit")
-    public WebElement registerButton;
+    public WebElement registerSubmit;
     @FindBy(xpath = "//*[text()='Registration saved!']")
     public WebElement successMessageToastContainer;
 
@@ -36,6 +36,9 @@ public class AbdullahPage {
 
     @FindBy(id = "account-menu")
     public WebElement accountMenu;
+
+    @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+    public WebElement registerButton;
 
     @FindBy(xpath = "//input[@id='firstPassword']")
     public WebElement firstPasswordInput;
@@ -98,6 +101,19 @@ public class AbdullahPage {
 
     @FindBy(xpath = "//span[text()='Cancel']")
     public WebElement cancelButton;
+
+    //US_026 locations
+
+    @FindBy(xpath = "//*[text()='CONTACT']")
+    public WebElement CONTACT;
+    @FindBy(xpath= "(//div[@role='menu'])[1]")
+    public WebElement ItemsAndTitlesDropDownMenu;
+    @FindBy(css = ".svg-inline--fa.fa-envelope-open-text.fa-w-16.fa-fw ")
+    public WebElement Messages;
+    @FindBy(css = "#jhi-confirm-delete-cMessage")
+    public WebElement deleteButton;
+
+
 
 
 

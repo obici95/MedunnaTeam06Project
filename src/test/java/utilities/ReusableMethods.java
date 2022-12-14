@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.SabriPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -126,5 +127,38 @@ public class ReusableMethods {
             }
         });
         return element;
+    }
+
+    public static void jsScrollClick(WebElement webElement) {  //kaydir ve tikla
+
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        try {
+            webElement.click();
+
+        } catch (Exception e) {
+
+            js.executeScript("arguments[0].scrollIntoView(true);", webElement);
+            js.executeScript("arguments[0].click()", webElement);
+        }
+    }
+
+    public static void appointmentOlustur() {
+        SabriPage medun = new SabriPage();
+        Actions action = new Actions(Driver.getDriver());
+        medun.makeAnAppointment.click();
+        ReusableMethods.waitFor(2);
+        ReusableMethods.jsScrollClick(medun.firstName);
+        medun.firstName.sendKeys("Ali");
+        ReusableMethods.waitFor(2);
+        medun.lastName.sendKeys("Guven");
+        ReusableMethods.waitFor(2);
+        medun.ssn.sendKeys("001-18-1818");
+        ReusableMethods.waitFor(2);
+        medun.email.sendKeys("ykg1@gmail.com");
+        ReusableMethods.waitFor(2);
+        medun.phone.sendKeys(("5070000000"),Keys.ENTER);
+        ReusableMethods.waitFor(5);
+
+
     }
 }
