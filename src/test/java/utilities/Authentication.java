@@ -10,24 +10,26 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class Authentication {
+    /*
+     public static void main(String[] args) {
+         String guncelToken = generateToken();
+         System.out.println(guncelToken);
+     }
 
-    public static void main(String[] args) {
-        String guncelToken = generateToken();
-        System.out.println(guncelToken);
-    }
+   */
 
 
-    public static String generateToken(){
+     public static String generateToken(){
 
-        String username = "Team06";
-        String password = "Team06.";
-        /*
-        {
-            "password": "string",
-            "rememberMe": true,
-            "username": "string"
-        }
-         */
+         String username = "Team06";
+         String password = "Team06.";
+         /*
+         {
+             "password": "string",
+             "rememberMe": true,
+             "username": "string"
+         }
+          */
         Map<String, Object> postBody = new HashMap<>();
         postBody.put("username", username);
         postBody.put("password", password);
