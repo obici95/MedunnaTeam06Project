@@ -21,7 +21,7 @@ public class US13_TC02_StepDefs {
     JavascriptExecutor jse= (JavascriptExecutor) Driver.getDriver();
     StringBuilder expectedAppointmentId=null;
     StringBuilder expectedPatientName=null;
-   String color = "yellow";
+   String color = "gray";
     String color1 = "indigo";
 
 
@@ -60,10 +60,10 @@ public class US13_TC02_StepDefs {
         List<WebElement> actualInPatientAppointmentIds=pages.inpatientAppointmentsIds;
         List<WebElement> actualInPatientDatas=pages.inPatientDatas;
 
-        jse.executeScript("arguments[0].style.border = '3px solid "+color1+"'",actualInPatientAppointmentIds.get(2) );
-        jse.executeScript("arguments[0].style.border = '3px solid "+color1+"'",actualInPatientDatas.get(2) );
-        jse.executeScript("arguments[0].style.backgroundColor = '" + color + "'" , actualInPatientAppointmentIds.get(2));
-        jse.executeScript("arguments[0].style.backgroundColor = '" + color + "'" , actualInPatientDatas.get(2));
+        jse.executeScript("arguments[0].style.border = '3px solid "+color1+"'",actualInPatientAppointmentIds.get(0) );
+        jse.executeScript("arguments[0].style.border = '3px solid "+color1+"'",actualInPatientDatas.get(0) );
+        jse.executeScript("arguments[0].style.backgroundColor = '" + color + "'" , actualInPatientAppointmentIds.get(0));
+        jse.executeScript("arguments[0].style.backgroundColor = '" + color + "'" , actualInPatientDatas.get(0));
 
         Assert.assertTrue("İstenen hasta listede yok.",actualInPatientAppointmentIds.get(actualInPatientAppointmentIds.size()-1).getText().contains(US13_TC01_StepDefs.expectedAppointmentId));
        Assert.assertTrue("İstenen hasta listede yok.",actualInPatientDatas.get(actualInPatientDatas.size()-1).getText().contains(US13_TC01_StepDefs.expectedPatientName));
