@@ -1,12 +1,21 @@
 package stepDefinitions;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
 public class Hooks {
+
+    public static RequestSpecification spec;
+    @Before(value = "@TC18")
+    public void setup(){
+        spec = new RequestSpecBuilder().setBaseUri("https://www.medunna.com/api/").build();
+    }
 
    @After
     public void tearDown(Scenario scenario){
